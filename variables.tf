@@ -15,6 +15,6 @@ variable "compute_sa" {
   default = "tf-compute-sa"
 }
 /*
-need terraform.tvars file with GPC Project ID config
+need terraform.tvars file with GCP Project ID config
 project= "projectID"
 */
