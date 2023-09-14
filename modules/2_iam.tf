@@ -1,4 +1,5 @@
 resource "google_project_iam_member" "iam" {
+  project = var.project
   for_each = toset([
     #"roles/logging.logWriter",
     #"roles/logging.viewer",

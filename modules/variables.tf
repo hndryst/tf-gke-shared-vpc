@@ -1,6 +1,6 @@
 variable "project" {
   type    = string
-  default = ""
+  default = "datalabs-hs"
 }
 variable "region" {
   type    = string
