@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket = "var.bucket"
-    prefix = "apigee-from-empty/state"
+    prefix = "gke-shared-vpc/state"
   }
 }
 
