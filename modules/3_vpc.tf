@@ -31,7 +31,7 @@ resource "google_compute_global_address" "psa-1" {
 resource "google_service_networking_connection" "psa-1-attach" {
   network                 = google_compute_network.vpc.id
   service                 = "servicenetworking.googleapis.com"
-  reserved_peering_ranges = [google_compute_global_address.psa1.name]
+  reserved_peering_ranges = [google_compute_global_address.psa-1.name]
 }
 resource "google_compute_network_peering_routes_config" "psa-1-route" {
   peering = google_service_networking_connection.psa-1.name
