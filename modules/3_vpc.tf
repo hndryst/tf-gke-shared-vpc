@@ -14,7 +14,7 @@ resource "google_compute_subnetwork" "subnet-1" {
     ip_cidr_range = "172.16.0.0/21"
   }
   secondary_ip_range {
-    range_name    = "tf-gke-service"
+    range_name    = "tf-gke-services"
     ip_cidr_range = "172.16.8.0/25"
   }
 }
@@ -23,8 +23,8 @@ resource "google_compute_global_address" "psa-1" {
   name          = "psa-1"
   purpose       = "VPC_PEERING"
   address_type  = "INTERNAL"
-  address       = "192.168.2.0"
-  prefix_length = 23
+  address       = "10.0.1.0"
+  prefix_length = 24
   network       = google_compute_network.vpc.id
 }
 
