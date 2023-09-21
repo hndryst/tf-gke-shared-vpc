@@ -7,11 +7,6 @@ resource "google_container_cluster" "dev-cluster-1" {
   networking_mode          = "VPC_NATIVE"
   network                  = google_compute_network.vpc.name
   subnetwork               = google_compute_subnetwork.subnet-1.name
-  private_cluster_config {
-    enable_private_nodes    = true
-    enable_private_endpoint = false
-    master_ipv4_cidr_block  = "10.0.0.0/28"
-  }
   ip_allocation_policy {
     cluster_secondary_range_name  = "tf-gke-pods"
     services_secondary_range_name = "tf-gke-services"
